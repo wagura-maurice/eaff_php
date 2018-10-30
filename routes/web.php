@@ -15,6 +15,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/score', function () {
+    $data = json_decode(file_get_contents(route('txn.data')), true);
+    return \EAFF::score($data);
+})->name('score');
+
+Route::get('/txn/data', function () {
+    return \EAFF::txn_data();
+})->name('txn.data');
+
+
 Route::post('/credit/account/', function (\Illuminate\Http\Request $request) {
 	return \EAFF::credit_account($request);
 })->name('credit.account');
@@ -23,10 +33,10 @@ Route::post('/debit/account', function (\Illuminate\Http\Request $request) {
 	return \EAFF::debit_account($request);
 })->name('debit.account');
 
-Route::post('/credit/paybill', function (\Illuminate\Http\Request $request) {
-	return \EAFF::credit_paybill($request);
-})->name('credit.paybill');
+Route::post('/debit/paybill', function (\Illuminate\Http\Request $request) {
+	return \EAFF::debit_paybill($request);
+})->name('debit.paybill');
 
-Route::post('/credit/airtime', function (\Illuminate\Http\Request $request) {
-	return \EAFF::credit_airtime($request);
-})->name('credit.airtime');
+Route::post('/debit/airtime', function (\Illuminate\Http\Request $request) {
+	return \EAFF::debit_airtime($request);
+})->name('debit.airtime');
