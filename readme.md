@@ -10,7 +10,7 @@ Run the following commands to get started:
 ## Library
 
 Transactions Score:
-- [28](https://127.0.0.1:8000/transact).
+- [24 is the total score](https://127.0.0.1:8000/transact).
 
 Tests to carry out:
 - [PHP Unit Test](https://ravepay.co/).

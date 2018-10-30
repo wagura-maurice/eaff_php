@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Route::get('/score', function () {
     $data = json_decode(file_get_contents(route('txn.data')), true);
-    return \EAFF::score($data);
+    return view('score', ['score' => \EAFF::score($data)]);
 })->name('score');
 
 Route::get('/txn/data', function () {
@@ -25,7 +25,7 @@ Route::get('/txn/data', function () {
 })->name('txn.data');
 
 
-Route::post('/credit/account/', function (\Illuminate\Http\Request $request) {
+/*Route::post('/credit/account/', function (\Illuminate\Http\Request $request) {
 	return \EAFF::credit_account($request);
 })->name('credit.account');
 
@@ -39,4 +39,4 @@ Route::post('/debit/paybill', function (\Illuminate\Http\Request $request) {
 
 Route::post('/debit/airtime', function (\Illuminate\Http\Request $request) {
 	return \EAFF::debit_airtime($request);
-})->name('debit.airtime');
+})->name('debit.airtime');*/

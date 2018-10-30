@@ -88,34 +88,34 @@
                 </div>
 
                 <!-- <div class="links">
-                    <a href="{{ route('credit.account') }}" onclick="event.preventDefault(); document.getElementById('credit-account').submit();">{{ __('Deposite') }}</a>
-                    <a href="{{ route('debit.account') }}" onclick="event.preventDefault(); document.getElementById('debit-account').submit();">{{ __('Withdraw') }}</a>
-                    <a href="{{ route('debit.paybill') }}" onclick="event.preventDefault(); document.getElementById('debit-paybill').submit();">{{ __('Pay via Paybill') }}</a>
-                    <a href="{{ route('debit.airtime') }}" onclick="event.preventDefault(); document.getElementById('debit-airtime').submit();">{{ __('Buy Airtime') }}</a>
-                </div> -->
+                    <a href="{{-- route('credit.account') --}}" onclick="event.preventDefault(); document.getElementById('credit-account').submit();">{{ __('Deposite') }}</a>
+                    <a href="{{-- route('debit.account') --}}" onclick="event.preventDefault(); document.getElementById('debit-account').submit();">{{ __('Withdraw') }}</a>
+                    <a href="{{-- route('debit.paybill') --}}" onclick="event.preventDefault(); document.getElementById('debit-paybill').submit();">{{ __('Pay via Paybill') }}</a>
+                    <a href="{{-- route('debit.airtime') --}}" onclick="event.preventDefault(); document.getElementById('debit-airtime').submit();">{{ __('Buy Airtime') }}</a>
+                </div>
 
-                <!-- <form id="credit-account" action="{{ route('credit.account') }}" method="POST" style="display: none;">
+                <form id="credit-account" action="{{-- route('credit.account') --}}" method="POST" style="display: none;">
                     @csrf
                     <input type="hidden" name="transaction_type_id" value="1">
                     <input type="hidden" name="transaction_amount" value="10000">
                     <input type="hidden" name="customer_id" value="1">
                 </form>
 
-                <form id="debit-account" action="{{ route('debit.account') }}" method="POST" style="display: none;">
+                <form id="debit-account" action="{{-- route('debit.account') --}}" method="POST" style="display: none;">
                     @csrf
                     <input type="hidden" name="transaction_type_id" value="2">
                     <input type="hidden" name="transaction_amount" value="5000">
                     <input type="hidden" name="customer_id" value="1">
                 </form>
 
-                <form id="debit-paybill" action="{{ route('debit.paybill') }}" method="POST" style="display: none;">
+                <form id="debit-paybill" action="{{-- route('debit.paybill') --}}" method="POST" style="display: none;">
                     @csrf
                     <input type="hidden" name="transaction_type_id" value="3">
                     <input type="hidden" name="transaction_amount" value="2000">
                     <input type="hidden" name="customer_id" value="1">
                 </form>
 
-                <form id="debit-airtime" action="{{ route('debit.airtime') }}" method="POST" style="display: none;">
+                <form id="debit-airtime" action="{{-- route('debit.airtime') --}}" method="POST" style="display: none;">
                     @csrf
                     <input type="hidden" name="transaction_type_id" value="4">
                     <input type="hidden" name="transaction_amount" value="1000">
