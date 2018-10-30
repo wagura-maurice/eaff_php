@@ -16,8 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/score', function () {
-    $data = json_decode(file_get_contents(route('txn.data')), true);
-    return view('score', ['score' => \EAFF::score($data)]);
+    return view('score', ['score' => \EAFF::getScore()]);
 })->name('score');
 
 Route::get('/txn/data', function () {

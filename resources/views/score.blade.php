@@ -84,7 +84,7 @@
                     {{ $score }}
                 </div>
                 <div class="links">
-                    <a href="{{ route('score') }}">Current Score</a>
+                    <a href="{{ route('score') }}">Current Transaction Score</a>
                 </div>
             </div>
         </div>

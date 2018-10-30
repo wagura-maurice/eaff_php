@@ -84,7 +84,7 @@
                     {{ config('app.name') }}
                 </div>
                 <div class="links">
-                    <a href="{{ route('score') }}">Score</a>
+                    <a href="{{ route('score') }}">Check Transaction Score</a>
                 </div>
 
                 <!-- <div class="links">
